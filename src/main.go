@@ -68,7 +68,7 @@ func main() {
 	lowestTemp := result[0].TimeSeries[2].Areas[0].Temperature[0]
 	highestTemp := result[0].TimeSeries[2].Areas[0].Temperature[1]
 	modifiedTodayWeather := strings.Join(strings.Split(todayWeather, "　"), "")
-	if strings.Contains(todayWeather, "雪") {
+	if strings.ContainsAny(todayWeather, "雨雪") {
 		message := linebot.NewTextMessage(
 			"明日の天気は\n" +
 				modifiedTodayWeather + "\n" +
