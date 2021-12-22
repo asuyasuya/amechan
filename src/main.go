@@ -63,7 +63,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	log.Print(result[0].TimeSeries[0].Areas[0].Weathers[0])
 	todayWeather := result[0].TimeSeries[0].Areas[0].Weathers[1]
 	lowestTemp := result[0].TimeSeries[2].Areas[0].Temperature[0]
 	highestTemp := result[0].TimeSeries[2].Areas[0].Temperature[1]
@@ -79,5 +78,4 @@ func main() {
 			log.Fatal(err)
 		}
 	}
-
 }
